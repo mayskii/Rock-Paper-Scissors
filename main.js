@@ -29,17 +29,15 @@ function game() {
                 console.log(`You Win! ${playerSelection} beats ${computerSelection}`)
                 countPlayerWin++;}
 
+            // console.log(`Computer ${countComputerWin}: Player ${countPlayerWin}`);
+            return (countComputerWin, countPlayerWin);
         }   
         playRound();
-        return (countComputerWin, countPlayerWin);
-        // console.log(`Computer ${countComputerWin}: Player ${countPlayerWin}`);
     } 
-
     if (countComputerWin > countPlayerWin) {
-            return (`Computer Win! ${countComputerWin}:${countPlayerWin}`)
+            console.log(`Computer Win! ${countComputerWin}:${countPlayerWin}`)
     } else if ((countComputerWin < countPlayerWin)) {
-            return (`Player Win! ${countPlayerWin}:${countComputerWin}`)
-    } else return (`Nobody Win! Same numbers! ${countPlayerWin}:${countComputerWin}`)
+        console.log(`Player Win! ${countPlayerWin}:${countComputerWin}`)
+    } else {console.log(`Nobody Win! Same numbers! ${countPlayerWin}:${countComputerWin}`)}
 }
-
 game();
